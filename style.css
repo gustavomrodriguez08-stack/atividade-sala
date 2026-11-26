@@ -1,0 +1,68 @@
+:root {
+  --fundo: #f6f7fb;
+  --texto: #1a2233;
+  --suave: #5a667c;
+  --borda: #dde2ec;
+  --superficie: #ffffff;
+  --vermelho: #d6342c;
+  --erro: #b3261e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #12161f;
+    --texto: #eef1f7;
+    --suave: #a3adc2;
+    --borda: #2b3345;
+    --superficie: #1b2130;
+    --vermelho: #ff6a5f;
+    --erro: #ff8a80;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+header, main { max-width: 760px; margin: 0 auto; padding: 0 1rem; }
+header { padding-top: 2rem; }
+h1 { margin: 0; font-size: 2rem; }
+header p { margin: .25rem 0 0; color: var(--suave); }
+section {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--vermelho);
+  border-radius: 8px;
+  padding: 1rem 1.25rem 1.25rem;
+  margin: 1.25rem 0;
+}
+h2 { margin: 0 0 .75rem; font-size: 1.2rem; }
+.linha { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+input, select, button {
+  font: inherit;
+  padding: .45rem .7rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: var(--fundo);
+  color: var(--texto);
+}
+input[type="number"] { width: 6rem; }
+button { cursor: pointer; background: var(--vermelho); color: #fff; border-color: var(--vermelho); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.ativo { background: transparent; color: var(--vermelho); }
+button.secundario { background: transparent; color: var(--texto); border-color: var(--borda); }
+:focus-visible { outline: 3px solid var(--vermelho); outline-offset: 2px; }
+.status { min-height: 1.5rem; margin: .5rem 0 0; color: var(--suave); }
+.status.erro { color: var(--erro); font-weight: 600; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .75rem; margin-top: .5rem; }
+.card { border: 1px solid var(--borda); border-radius: 8px; padding: .75rem 1rem; }
+.card h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--suave); }
+.card button { margin-top: .6rem; }
+#carregando {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: var(--vermelho); color: #fff;
+  text-align: center; padding: .35rem; font-weight: 600;
+}

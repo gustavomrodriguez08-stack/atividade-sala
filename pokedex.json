@@ -1,0 +1,6 @@
+[
+  { "id": 1, "nome": "Bulbasaur", "tipos": ["grama", "veneno"], "hp": 45 },
+  { "id": 4, "nome": "Charmander", "tipos": ["fogo"], "hp": 39 },
+  { "id": 7, "nome": "Squirtle", "tipos": ["água"], "hp": 44 },
+  { "id": 25, "nome": "Pikachu", "tipos": ["elétrico"], "hp": 35 }
+]
