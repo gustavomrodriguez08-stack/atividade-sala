@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokédex assíncrona</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="carregando" hidden>Carregando…</div>
+
+  <header>
+    <h1>Pokédex assíncrona</h1>
+    <p>Quatro formas de lidar com o “depois” no JavaScript.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="t1">
+      <h2 id="t1">Atividade 1 · Buscar pelo número (callback)</h2>
+      <div class="linha">
+        <label for="a1-campo">Número</label>
+        <input id="a1-campo" type="number" min="1" value="25" />
+        <button id="a1-botao" type="button">Buscar</button>
+      </div>
+      <p id="a1-status" class="status" role="status"></p>
+      <div id="a1-resultado" class="cards"></div>
+    </section>
+
+    <section aria-labelledby="t2">
+      <h2 id="t2">Atividade 2 · Navegar por tipo (gerador)</h2>
+      <div class="linha">
+        <label for="a2-seletor">Tipo</label>
+        <select id="a2-seletor">
+          <option value="" selected disabled>Escolha um tipo</option>
+        </select>
+        <button id="a2-proximo" type="button" disabled>Próximo</button>
+      </div>
+      <p id="a2-status" class="status" role="status"></p>
+      <div id="a2-resultado" class="cards"></div>
+    </section>
+
+    <section aria-labelledby="t3">
+      <h2 id="t3">Atividade 3 · Montar um time (Promise.all)</h2>
+      <div class="linha">
+        <input id="a3-id1" type="number" min="1" value="1" aria-label="Pokémon 1" />
+        <input id="a3-id2" type="number" min="1" value="4" aria-label="Pokémon 2" />
+        <input id="a3-id3" type="number" min="1" value="7" aria-label="Pokémon 3" />
+        <button id="a3-botao" type="button">Montar time</button>
+      </div>
+      <p id="a3-status" class="status" role="status"></p>
+      <div id="a3-resultado" class="cards"></div>
+    </section>
+
+    <section aria-labelledby="t4">
+      <h2 id="t4">Atividade 4 · Lista com cache e favoritos (async/await)</h2>
+      <div class="linha">
+        <button id="a4-limpar" type="button" class="secundario">Limpar cache e recarregar</button>
+      </div>
+      <p id="a4-status" class="status" role="status"></p>
+      <div id="a4-lista" class="cards"></div>
+    </section>
+  </main>
+
+  <script src="api.js"></script>
+  <script src="atividade1.js"></script>
+  <script src="atividade2.js"></script>
+  <script src="atividade3.js"></script>
+  <script src="atividade4.js"></script>
+</body>
+</html>
